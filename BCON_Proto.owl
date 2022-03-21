@@ -1,0 +1,1598 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.github.com/dbakonyi/BCON/bcon.owl#"
+     xml:base="http://www.github.com/dbakonyi/BCON/bcon.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:bfo="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bcon="http://www.semanticweb.org/dani/ontologies/2022/1/untitled-ontology-29#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"/>
+        <dc:contributor xml:lang="en">Balázs Fürtön</dc:contributor>
+        <dc:contributor xml:lang="en">Dániel Bakonyi</dc:contributor>
+        <dc:contributor xml:lang="en">Gergely Dobszay</dc:contributor>
+        <dc:license xml:lang="en">https://creativecommons.org/licenses/by/4.0/</dc:license>
+        <rdfs:label xml:lang="en">BCON Proto Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000137 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000137">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionalPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionalPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionalPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">constructional part of</rdfs:label>
+        <rdfs:label xml:lang="hu">szerkezeti része neki</rdfs:label>
+        <skos:definition xml:lang="en">b is structural component of a for some time = Def. for some time (a is a structure or a structural component and b is a structural component, and b is a continuant part of a)</skos:definition>
+        <skos:example xml:lang="en">A masonry block b is structural component of a masonry wall a.</skos:example>
+        <skos:example xml:lang="en">A wall b is structural component of a building a.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#DescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#DescribedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsSubjectOf"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Describes"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">described by</rdfs:label>
+        <skos:definition xml:lang="en">x prescribed_by y iff y is an instance of Information Content Entity and x is an instance of Entity, such that y serves as a rule or guide for x if x is an Occurrent, or y serves as a model for x if x is a Continuant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Describes">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#is_about"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DescriptiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+        <skos:definition xml:lang="en">x describes y iff x is an instance of Information Content Entity, and y is an instance of Entity, such that x is about the characteristics by which y can be recognized or visualized.</skos:definition>
+        <skos:example xml:lang="en">the content of a newspaper article describes some current event</skos:example>
+        <skos:example xml:lang="en">the content of a visitor&apos;s log describes some facility visit</skos:example>
+        <skos:example xml:lang="en">the content of an accident report describes some accident</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#DesignatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#DesignatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsSubjectOf"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Designates"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">designated by</rdfs:label>
+        <skos:definition xml:lang="en">x designated_by y iff y is an instance of Information Content Entity and x is an instance of Entity, such that given some context, y uniquely distinguishes x from other entities.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Designates -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Designates">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#is_about"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DesignativeInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">designates</rdfs:label>
+        <skos:definition xml:lang="en">x designates y iff x is an instance of an Information Content Entity, and y is an instance of an Entity, such that given some context, x uniquely distinguishes y from other entities.</skos:definition>
+        <skos:example xml:lang="en">a URL designates the location of a Web Page on the internet</skos:example>
+        <skos:example xml:lang="en">a person&apos;s name designates that person</skos:example>
+        <skos:example xml:lang="en">a vehicle identification number designates some vehicle</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasConnectionOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConnectionOutput">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionOutputOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InternalFiatConnectionSurface"/>
+        <rdfs:label xml:lang="en">has connection output</rdfs:label>
+        <skos:definition xml:lang="en">process a has connection output some fiat connection surface b = Def. process a constructs a new building construction object whith a connection b to some previously existing building construction object.</skos:definition>
+        <skos:example xml:lang="en">A process of plastering has connection output the connection between the masonry being plastered and the plaster layer.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasConnectionSurface -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConnectionSurface">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasContinuantPartialOverlapWith"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface"/>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface"/>
+        <rdfs:label xml:lang="en">has connection surface</rdfs:label>
+        <rdfs:label xml:lang="hu">van kapcsolati felülete</rdfs:label>
+        <skos:definition xml:lang="en">a has connection surface b = Def. both a and b a material entities, and a has a partial overlap with b, which is minimal in one spatial dimension, and b has also a partial overlap with some other material entity c</skos:definition>
+        <skos:example xml:lang="en">A masonry a has connection surface b to a layer of plaster on that masonry, where b is where a and c meet, e.g. the internal face of the masonry in case of an internal plaster.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectInput">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConstructionObjectInputOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+                    <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsMaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has construction object input</rdfs:label>
+        <skos:definition xml:lang="en">process a has construction object input some building construction object or building site (as material entitiy) b = Def. process a constructs a new building construction object connected to b</skos:definition>
+        <skos:example xml:lang="en">A process of building a foundation has construction object input a building site on which the foundation is being built.</skos:example>
+        <skos:example xml:lang="en">A process of plastering has a construction object input a wall which is being plastered and a new plaster layer is created on it.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectOutput">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConstructionObjectOutputOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+        <rdfs:label xml:lang="en">has construction object output</rdfs:label>
+        <skos:definition xml:lang="en">process a has construction object output some building construction object b = Def. process a constructs a new building construction object b by creating it from antecedent amterials or by istalling a product</skos:definition>
+        <skos:example xml:lang="en">A process of installaing a product, e.g. a window, has construction object output the window as a building construction object. The product is transformed from a product to a construction object (part of the construction) via the act of installing it.</skos:example>
+        <skos:example xml:lang="en">A process of plastering has construction object output a plaster layer object.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionalPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionalPart">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">has constructional part</rdfs:label>
+        <rdfs:label xml:lang="hu">van szerkezeti része</rdfs:label>
+        <skos:definition xml:lang="en">a has structural component b for some time = Def. for some time (a is a structure or a structural component and b is a structural component, and b is a continuant part of a)</skos:definition>
+        <skos:example xml:lang="en">A building a has structural component wall b.</skos:example>
+        <skos:example xml:lang="en">Masonry wall a has strctural component masonry block b.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasContinuantPartialOverlapWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasContinuantPartialOverlapWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label xml:lang="en">has continuant partial overlap with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasEnvironment -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasEnvironment">
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from some suitable reference ontology. For now it is based on a presentation about ENVO.</rdfs:comment>
+        <rdfs:label xml:lang="en">has environment</rdfs:label>
+        <rdfs:label xml:lang="hu">van környezete</rdfs:label>
+        <skos:definition xml:lang="en">b has environment b = Def. a includes b (partially or wholly) within its site and a causally influences b</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasMaterialInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasMaterialInput">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsMaterialInputOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfMaterial"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Product"/>
+        <rdfs:label xml:lang="en">has material input</rdfs:label>
+        <skos:definition xml:lang="en">process a has material input some product or portion of material b = Def. process a constructs a new building construction object by using some or all of b</skos:definition>
+        <skos:example xml:lang="en">A process of plastering uses some portion of dry plaster mix.</skos:example>
+        <skos:example xml:lang="en">Som process of window installation uses a product some window product.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#HasProcessProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#HasProcessProfile">
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfileOf"/>
+        <rdfs:label xml:lang="en">has process profile</rdfs:label>
+        <skos:definition xml:lang="en">This relation is held between an instance of a process profile and an instance of a process, where the former is a particular, identifiable aspect of the latter. For example, a thermal behavior of an engine during engine ignition is a process profile of an engine ignition process.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsAMeasurementOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsAMeasurementOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Describes"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MeasurementInformationContentEntity"/>
+        <rdfs:label xml:lang="en">is a measurement of</rdfs:label>
+        <skos:definition xml:lang="en">x is_a_measurement_of y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionOutputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:label xml:lang="en">connection output of</rdfs:label>
+        <skos:definition xml:lang="en">some fiat connection surface b is connection output of process a = Def. process a constructs a new building construction object whith a connection b to some previously existing building construction object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasContinuantPartialOverlapWith"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is connection surface of</rdfs:label>
+        <rdfs:label xml:lang="hu">kapcsolati felülete neki</rdfs:label>
+        <skos:definition xml:lang="en">b is connection surface of a = Def. both a an b are material entities, and a has a partial overlap with b, which is minimal in one spatial dimension, while b has also a partial overlap with material entity c</skos:definition>
+        <skos:example xml:lang="en">A connection surface b is connection surface of masonry a when a has a plaster layer c, and b is where a and c meet, e.g. the internal face of the masonry in case of an internal plaster.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsConstructionObjectInputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConstructionObjectInputOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:label xml:lang="en">construction object input of</rdfs:label>
+        <skos:definition xml:lang="en">some building construction object or building site (as material entitiy) b is construction object input of process a = Def. process a constructs a new building construction object connected to b</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsConstructionObjectOutputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConstructionObjectOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:label xml:lang="en">construction object output of</rdfs:label>
+        <skos:definition xml:lang="en">building construction object b is construction object output process a  = Def. process a constructs a new building construction object b by creating it from antecedent amterials or by istalling a product</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf">
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from some suitable reference ontology. For now it is based on a presentation about ENVO.</rdfs:comment>
+        <rdfs:label xml:lang="en">is environment of</rdfs:label>
+        <rdfs:label xml:lang="hu">környezete valaminek</rdfs:label>
+        <skos:definition xml:lang="en">a is environment of b = Def. a includes b (partially or wholly) within its site and a causally influences b</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsMaterialInputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsMaterialInputOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:label xml:lang="en">is material input ot</rdfs:label>
+        <skos:definition xml:lang="en">some product or portion of material b is material input of process a  = Def. process a constructs a new building construction object by using some or all of b</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsMeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DescribedBy"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured by</rdfs:label>
+        <skos:definition xml:lang="en">y is_measured_by x iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#IsSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#IsSubjectOf">
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#is_about"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">is subject of</rdfs:label>
+        <rdfs:label xml:lang="hu">témája valaminek</rdfs:label>
+        <skos:definition xml:lang="en">A primitive relationship between an instance of an Entity and an instance of an Information Content Entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MadeFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MadeFrom">
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialAntecedentOf"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfMaterial"/>
+        <rdfs:label xml:lang="hu">anyagból készült</rdfs:label>
+        <rdfs:label xml:lang="en">made from</rdfs:label>
+        <skos:definition xml:lang="en">This relation is held between an instance of a material entity and an instance of batch of material, when the material composition of the material entity is not identical to the batch of material, but the batch of material was used to create the material entity but through some process was changed.</skos:definition>
+        <skos:example xml:lang="en">An in-situe concrete wall is mafe from a batch of wet concrete, it is not materially identical to it, because the concrete has dried out, solidified and cured so it has a different material composition now.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MadeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MadeOf">
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialOf"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfMaterial"/>
+        <rdfs:comment xml:lang="en">This shoudl ideally be imported from a suitable ontology. For now it is based on the property in PSO.</rdfs:comment>
+        <rdfs:label xml:lang="en">made of</rdfs:label>
+        <rdfs:label xml:lang="hu">van anyaga</rdfs:label>
+        <skos:definition xml:lang="en">This relation is held between an instance of a material entity and an instance of batch of material, when the material composition of the material entity is identical to the batch of material.</skos:definition>
+        <skos:example xml:lang="en">An engine block is made of a portion of cast iron.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialAntecedentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialAntecedentOf">
+        <rdfs:label xml:lang="hu">anyagi előzménye valaminek</rdfs:label>
+        <rdfs:label xml:lang="en">material antecedent of</rdfs:label>
+        <skos:definition xml:lang="en">This relation is held between an instance of a material entity and an instance of batch of material, when the material composition of the material entity is not identical to the batch of material, but the batch of material was used to create the material entity but through some process was changed.</skos:definition>
+        <skos:example xml:lang="en">A batch of wet concrete is material antecedent to an in-situe concrete wall. The wall it is not materially identical to the wet concrete, because the concrete has dried out, solidified and cured so the wall has a different material composition now.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialOf">
+        <rdfs:label xml:lang="hu">anyaga valaminek</rdfs:label>
+        <rdfs:label xml:lang="en">material of</rdfs:label>
+        <skos:definition xml:lang="hu">This relation is held between an instance of a batch of material and amn instance of a material entity, when the material composition of the material entity is identical to the batch of material.</skos:definition>
+        <skos:example xml:lang="hu">A batch of steel is the material of a steel bracket.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicallyRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicallyRelatedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicallyRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:comment xml:lang="en">This should ideally be imported from a suitable reference ontology.
+For now it is based on PSO.</rdfs:comment>
+        <rdfs:label xml:lang="hu">fizikailag függ tőle</rdfs:label>
+        <rdfs:label xml:lang="en">physically related to</rdfs:label>
+        <skos:definition xml:lang="en">This relation is held between two instances of specifically dependent continuant, to express those two instances are related to each other due to certain laws of physics. For example, the temperature of the air in this room is physically related to the pressure of the air in this room. The relation is transitive and symmetric.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PrescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PrescribedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsSubjectOf"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Prescribes"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">prescribed by</rdfs:label>
+        <skos:definition xml:lang="en">x prescribed_by y iff y is an instance of Information Content Entity and x is an instance of Entity, such that y serves as a rule or guide for x if x is an Occurrent, or y serves as a model for x if x is a Continuant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Prescribes -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Prescribes">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#is_about"/>
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DirectiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">prescribes</rdfs:label>
+        <skos:definition xml:lang="en">x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant.</skos:definition>
+        <skos:example xml:lang="en">a blueprint serves as a model of some Artifact or Facility</skos:example>
+        <skos:example xml:lang="en">a professional code of conduct serves as a set of rules to be followed while acting in a role within that profession</skos:example>
+        <skos:example xml:lang="en">an Operations Plan serves as a guide for the tasks that need to be performed to achieve the Objectives of the Operation</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfileOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfileOf">
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfile"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">process profile of</rdfs:label>
+        <skos:definition xml:lang="en">This relation is held between an instance of a process profile and an instance of a process, where the former is a particular, identifiable aspect of the latter. For example, a thermal behavior of an engine during engine ignition is a process profile of an engine ignition process.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#RepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#RepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DescribedBy"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">represented by</rdfs:label>
+        <skos:definition xml:lang="en">x represented_by y iff y is an instance of Information Content Entity and x is an instance of Entity, such that y presents the characteristics by which x can be recognized or visualized, and there exists a one-to-one correspondence between the components of x and y.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Represents">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Describes"/>
+        <rdfs:comment xml:lang="en">The relationship that is being defined here is that between the content of a photographic image and its object, between the content of a video and its objects and events, between the content of an audio recording and the sounds or events generating those sounds, or between the content of a written transcript and the verbal event that it transcribes.</rdfs:comment>
+        <rdfs:label xml:lang="en">represents</rdfs:label>
+        <skos:definition xml:lang="en">x represents y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x presents the characteristics by which y can be recognized or visualized, and there exists a one-to-one correspondence between the components of x and y.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#is_about -->
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#is_about">
+        <rdfs:domain rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InformationContentEntity"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from a suitable ontology, most likely CCO. For now it is based in the property in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+        <rdfs:label xml:lang="hu">róla szól</rdfs:label>
+        <skos:definition xml:lang="en">A primitive relationship between an Information Content Entity and some Entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Act -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Act">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment xml:lang="en">In the next version should be imported from a suitable referece ontology.
+For now based on the class in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">act</rdfs:label>
+        <rdfs:label xml:lang="hu">aktus</rdfs:label>
+        <skos:definition xml:lang="en">A process in which at least one agent plays a casative role.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfAppraisal -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfAppraisal">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfMeasuring"/>
+        <rdfs:comment xml:lang="en">This should be imported from a suitable reference ontology. 
+For now this is based on the class in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">act of appraisal</rdfs:label>
+        <skos:definition xml:lang="en">An Act of Measuring that involves evaluating, assessing, estimating, or judging the nature, value, importance, condition, or quality of something or someone.</skos:definition>
+        <skos:example xml:lang="en">Act of classifying surafce evenness.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectInput"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsMaterialObject"/>
+                            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Act"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfMeasuring"/>
+        <rdfs:comment xml:lang="en">It usually has material inputs some building product and or patch of material, though some acts of building dont use any material at all, only tools.</rdfs:comment>
+        <rdfs:comment xml:lang="en">There can be more sublcasses as defined here. For example the creation or demolition of temporary structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">act of construction</rdfs:label>
+        <rdfs:label xml:lang="hu">építési aktus</rdfs:label>
+        <skos:definition xml:lang="en">An intentional act that has some constructional input some construction object or building site (as material entity) and creates or modifies some construction objects.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionCreation -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionCreation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectOutput"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InSituBuildingConstructionObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionInstallation"/>
+        <rdfs:comment xml:lang="en">It can have different act of building within it.</rdfs:comment>
+        <rdfs:label xml:lang="en">act of construction creation</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezet létrehozása</rdfs:label>
+        <skos:definition xml:lang="en">An act of building that has construction output some in-situ building construction object.</skos:definition>
+        <skos:example xml:lang="en">Plastering a wall, laying a mortar layer on top of a row of bricks, casting a in-situ reinforced concrete wall</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionDemolition -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionDemolition">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:label xml:lang="en">act of construction demolition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionInstallation -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionInstallation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasConstructionObjectOutput"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PrefabricatedBuildingConstructionObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#HasMaterialInput"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Product"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:comment xml:lang="en">It can have building construction different acts of building within it.</rdfs:comment>
+        <rdfs:label xml:lang="en">act of construction installation</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezet installáció</rdfs:label>
+        <skos:definition xml:lang="en">An act of building that has constructional output some prefabricated building construction</skos:definition>
+        <skos:example xml:lang="en">The installation of a window, the gluing on of a tile, the screwing on of a bracket, etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionModification -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionModification">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstruction"/>
+        <rdfs:label xml:lang="en">act of construction modification</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezet módosítása</rdfs:label>
+        <skos:definition xml:lang="en">An act of building that has constructional output some new or modified features of some building construction objects or a building site (as material entity)</skos:definition>
+        <skos:example xml:lang="en">The drilling of a hole in a wall, the cutting of a wooden beam, etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfMeasuring -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfMeasuring">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Act"/>
+        <rdfs:comment xml:lang="en">This should be imported from a suitable reference ontology. 
+For now this is based on the class in CCO.</rdfs:comment>
+        <rdfs:label xml:lang="en">act of measurement</rdfs:label>
+        <rdfs:label xml:lang="hu">mérési aktus</rdfs:label>
+        <skos:definition xml:lang="en">An intentional act that involves determining the extent, dimensions, quantity, or quality of an Entity relative to some standard</skos:definition>
+        <skos:example xml:lang="en">Act of thermal conductivity measurement, act of surface evenness measurement, etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BIMModel -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BIMModel">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Model"/>
+        <rdfs:label xml:lang="en">BIM model</rdfs:label>
+        <rdfs:label xml:lang="hu">BIM modell</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A digital model that is about some Material Entities (amongst other things) connected to a Building or part of a Building (material entity)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Building -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Building">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#TemporaryConstructionObject"/>
+        <rdfs:comment xml:lang="en">The material structure of a building (foundations, walls, slabs etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">building</rdfs:label>
+        <rdfs:label xml:lang="hu">épület</rdfs:label>
+        <skos:prefLabel xml:lang="en">(Elucidation) A material artifact, stationary or moved very seldomly, usually permanent or at least having a long planned lifespan, built and used to envelop a protected environment for long time human habitation or other human activities that need to be performed in such an environment. Has building role.</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingAsSite -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingAsSite">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <rdfs:comment xml:lang="en">In the next version this should probably be aligned with BOT, if possible.</rdfs:comment>
+        <rdfs:label xml:lang="en">building as site</rdfs:label>
+        <rdfs:label xml:lang="hu">épület mint hely</rdfs:label>
+        <skos:definition xml:lang="en">A site defined by a building (as material object)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionalPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Building"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionObject"/>
+        <rdfs:comment xml:lang="en">Examples are: a wall, a slab, a window, a column etc.
+Building construction object can have other building construction objects as parts, like rebars in a reinforced oncrete wall, or masonry blocks in a masonry wall. We can represent constructions with an arbitary level of granularity. 
+Building construction objects are created through an act of building.
+Building construction objects are created relative to and in connection with some existing building construction objects from some previous building steps (a plaster layer is created on a wall) or the building site itself (building site as a material object, a.k.a the part of the Earth&apos;s crust under the building).</rdfs:comment>
+        <rdfs:label xml:lang="en">building construction object</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezet objektum</rdfs:label>
+        <skos:definition xml:lang="en">A material artifact which is constructional part of a building.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionDisposition -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionDisposition">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:comment xml:lang="en">Building construction dispositions and functions are intimately related. Functions of builidng constructions object and systems are usually evauated in terms of the measurements of the corresponding dipositions. For eaxmple the function to thermally insulate is often evaluated in therms of the thermal transmittance (disposition) which is realized thorugh a thermal transmission process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Most of what we usually refer to as the properties of building constructions are in fact dispositions in bfo because they are only realized in some corresponding process. E.g. the thremal transmittance of a wall is only realized in a thermal transmission process if there is a temperature difference.</rdfs:comment>
+        <rdfs:label xml:lang="en">building construction disposition</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezet diszpozíció</rdfs:label>
+        <skos:definition xml:lang="en">A disposition that specifically depends on a building construction object or building construction system</skos:definition>
+        <skos:example xml:lang="en">Loadbearing capacity, thermal transmittance, sound resistance, disposition to transfer heat convectively, elasticity etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionFunction -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionFunction">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:comment xml:lang="en">Building construction functions are the reason for creating certain objects and systems and their realization in certain processes are the things usually measured when we want to evaluate the objects and systems.
+Simple bulding construction objects usually have simpler functions and more complex systems more complex functions.</rdfs:comment>
+        <rdfs:label xml:lang="en">building construction function</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezeti funkció</rdfs:label>
+        <skos:definition xml:lang="en">A function that specifically depends on a building construction object or system.</skos:definition>
+        <skos:example xml:lang="en">Envelope function, loadbearing function</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionProperty -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionProperty">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialProperty"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalProperty"/>
+        <rdfs:label xml:lang="en">building construction property</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezeti tulajdonság</rdfs:label>
+        <skos:definition xml:lang="en">A quality that specifically depends on some fiat connection surface, building construction object or building construction system and it is derived from its material makeup and properties, geometrical properties and physical state.</skos:definition>
+        <skos:example xml:lang="en">Surfaces properties that are not geometrical or material, like surface cleanliness, surface coverage</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionSystem -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem"/>
+        <rdfs:comment xml:lang="en">The specific function can only be realized based on the functions and material makeup of the parts of the system, when properly connected together.
+A building construction system can have gaps in it, e.g. the roofing system can be compries of physically disconnected roofs. The function is the unifying part.</rdfs:comment>
+        <rdfs:label xml:lang="en">building construction system</rdfs:label>
+        <rdfs:label xml:lang="hu">épületszerkezeti rendszer</rdfs:label>
+        <skos:definition xml:lang="en">A sufficient subset of building consruction objects that are constructed for a specific building construction function possible for a specific part of a building.</skos:definition>
+        <skos:example xml:lang="en">The thermal insulation system of a building, the external sound insulation system of a building, the external sound insulation system of a room of a building, etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingEnvironment -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingEnvironment">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem"/>
+        <rdfs:label xml:lang="en">building environment</rdfs:label>
+        <rdfs:label xml:lang="hu">épület környezet</rdfs:label>
+        <skos:definition xml:lang="en">An environmental system that environs one or more buildings or is an environment eithin a building.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProduct -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProduct">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProductRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Product"/>
+        <rdfs:comment xml:lang="en">A building product is a product intended to be used in an act of building.</rdfs:comment>
+        <rdfs:label xml:lang="en">building product</rdfs:label>
+        <rdfs:label xml:lang="hu">építési termék</rdfs:label>
+        <skos:definition xml:lang="en">A product that has a building product role.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProductAggregate -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProductAggregate">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:comment xml:lang="en">Usually created by a specific manufacturer as a major part of its building product line. The parts are deisgned to be easy to assemble / interface. It van have optional combinations of parts to sute different situations and different functions (withon a more general function).</rdfs:comment>
+        <rdfs:label xml:lang="en">building product aggregate</rdfs:label>
+        <rdfs:label xml:lang="hu">építési termék készlet</rdfs:label>
+        <skos:definition xml:lang="en">A collection of building products that are designed to work efficiently together to form the major parts of a specific building construction system.</skos:definition>
+        <skos:example xml:lang="en">A kit of various elements to construct a facade cladding framework (e.g. plastic thermal brakes, brackets, cladding holding rails etc), a waterproofing membrane and its various corresponding auxiliary elements (e.g. PVC membrane with PVC coated metal flashing, underlay felt, protection layer etc.)</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProductRole -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingProductRole">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ProductRole"/>
+        <rdfs:label xml:lang="en">building product role</rdfs:label>
+        <rdfs:label xml:lang="hu">építési termék szerep</rdfs:label>
+        <skos:definition xml:lang="en">A product role inhering in an entity that is the specified output of a building product production process.</skos:definition>
+        <skos:example xml:lang="en">The building product role of a window or door.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingRole -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="en">building role</rdfs:label>
+        <rdfs:label xml:lang="hu">épület szerep</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsMaterialObject -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsMaterialObject">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatObjectSurface"/>
+        <rdfs:comment xml:lang="en">Def. = a part of the Earth&apos;s crust, demarcated by legal documents, on which a building can be built.</rdfs:comment>
+        <rdfs:label xml:lang="en">building site as material object</rdfs:label>
+        <rdfs:label xml:lang="hu">építési telek mint materiális objektum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsSite -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsSite">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <rdfs:label xml:lang="en">building site as site</rdfs:label>
+        <rdfs:label xml:lang="hu">építési telek mint hely</rdfs:label>
+        <skos:definition xml:lang="en">A site in which a building (as material object) can be located</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSpace -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSpace">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <rdfs:comment xml:lang="en">In the next version this should probably be aligned with BOT, if possible.</rdfs:comment>
+        <rdfs:label xml:lang="en">building space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact"/>
+        <rdfs:label xml:lang="en">built asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#CivilEngineeringWork -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#CivilEngineeringWork">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset"/>
+        <rdfs:label xml:lang="en">civil engineering work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Classification -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Classification">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DescriptiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">Inpired by CCO nominal information content entity</rdfs:comment>
+        <rdfs:label xml:lang="en">classification</rdfs:label>
+        <rdfs:label xml:lang="hu">klasszifikáció</rdfs:label>
+        <skos:definition xml:lang="en">A descriptive information content entity that classifies an Entity into some group or class according to some systematic division of groups or classes based on some shared characteristics.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ClassificationByConstructionClassificationSystem -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ClassificationByConstructionClassificationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Classification"/>
+        <rdfs:label xml:lang="en">classification by construction classification system</rdfs:label>
+        <rdfs:label xml:lang="hu">klasszifikáció szerkezeti klasszifikációs rendszer által</rdfs:label>
+        <skos:definition xml:lang="en">A classification according to some construction classification system.</skos:definition>
+        <skos:example xml:lang="en">Uniclass classification, Omniclass classification, IFC classification.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Component -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Component">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ComponentRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact"/>
+        <rdfs:comment xml:lang="en">In the next version this should be imported from a suitable reference ontology.
+In IOF: a material artifact that bears the component role.
+A component is continuant part of a product. Components initially exist as products themselves sicne they to have to be produced.</rdfs:comment>
+        <rdfs:label xml:lang="en">component</rdfs:label>
+        <rdfs:label xml:lang="hu">komponens</rdfs:label>
+        <skos:example xml:lang="en">The frame of a window. A rubber gasket in a window frame. The thermal insulation in a thermal brake for reinforced concrete balcony slabs.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ComponentRole -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ComponentRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from some suitable ontology.
+For now it is based on a class in an IOF paper.</rdfs:comment>
+        <rdfs:label xml:lang="en">component role</rdfs:label>
+        <rdfs:label xml:lang="hu">komponens szerep</rdfs:label>
+        <skos:definition xml:lang="en">A role inhering in a material artifact that is designed to be a proper continuant part of some material artifact</skos:definition>
+        <skos:example xml:lang="en">The component role of a rubber gasket in a window frame.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionObject -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionObject">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact"/>
+        <rdfs:label xml:lang="en">construction object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ContactBuildingConstructionDisposition -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ContactBuildingConstructionDisposition">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionDisposition"/>
+        <rdfs:label xml:lang="en">contact building construction disposition</rdfs:label>
+        <rdfs:label xml:lang="hu">kapcsolati épületszerkezeti diszpozíció</rdfs:label>
+        <skos:definition xml:lang="en">A building construction disposition that specifically depends on a fiat connection surface.</skos:definition>
+        <skos:example xml:lang="en">The loadbearing capacity of a connection.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ContactMaterialProperty -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ContactMaterialProperty">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialProperty"/>
+        <rdfs:comment xml:lang="en">A type of material property that is only &quot;found&quot; in connections, like contact resitances.</rdfs:comment>
+        <rdfs:label xml:lang="en">contact material property</rdfs:label>
+        <rdfs:label xml:lang="hu">kapcsolati anyagtulajdonság</rdfs:label>
+        <skos:definition xml:lang="en">A material property which specifically depends on a fiat connection surface.</skos:definition>
+        <skos:example xml:lang="en">The liquid water conductivity of a contact surface.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#DescriptiveInformationContentEntity -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#DescriptiveInformationContentEntity">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the next version should be imported from some suitable reference ontology, mostly likely CCO or IAO.
+For now it is based on the CCO class.</rdfs:comment>
+        <rdfs:label xml:lang="en">descriptive information content entity</rdfs:label>
+        <skos:definition xml:lang="en">An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#DesignativeInformationContentEntity -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#DesignativeInformationContentEntity">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the next version should be imported from some suitable reference ontology, mostly likely CCO or IAO.
+For now it is based on the CCO class.</rdfs:comment>
+        <rdfs:label xml:lang="en">designative information content entity</rdfs:label>
+        <skos:definition xml:lang="en">An Information Content Entity that consists of a set of symbols that denote some Entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#DirectiveInformationContentEntity -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#DirectiveInformationContentEntity">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the next version should be imported from some suitable reference ontology, mostly likely CCO or IAO.
+For now it is based on the CCO class.</rdfs:comment>
+        <rdfs:label xml:lang="en">directive information content entity</rdfs:label>
+        <skos:definition xml:lang="en">An Information Content Entity that consists of a set of propositions that describe some Entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#System"/>
+        <rdfs:comment xml:lang="en">In the next version this should be imported from a suitable reference ontology.
+Based on the Environmental Ontology: a system that has the disposition to environ one or more material entities, where a environes b = Def. a includes b (partially or wholly) within its site and a causally influences b</rdfs:comment>
+        <rdfs:label xml:lang="en">environmental system</rdfs:label>
+        <rdfs:label xml:lang="hu">környezeti rendszer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ExternalBuildingEnvironment -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ExternalBuildingEnvironment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingEnvironment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InternalBuildingEnvironment"/>
+        <rdfs:comment xml:lang="en">An external building environment contains all the material entities arond a building that most directly influence a building (the air, foliage, people and trafic  etc around the building) including the fiat connection surfaces that form the external envelope of the building itself. A single external surface is in causal connection with the other external surfaces (e.g. through radiation exchange shading, reverberation of sound, convection of air, runoff of water etc.) so they must form part of the same environmental system. 
+The external environment of a building is usually the immeadiate neighbourhood or microclimate.</rdfs:comment>
+        <rdfs:label xml:lang="en">external building environment</rdfs:label>
+        <rdfs:label xml:lang="hu">külső épület környezet</rdfs:label>
+        <skos:definition xml:lang="en">A building environment that is external to one or more buildings.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ExternalFiatConnectionSurface -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ExternalFiatConnectionSurface">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030"/>
+                            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsMaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#InternalFiatConnectionSurface"/>
+        <rdfs:comment xml:lang="en">Boundary phenomena depend on both the object that the boundary belongs to and the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">external fiat connection surface</rdfs:label>
+        <rdfs:label xml:lang="hu">külső fiat kapcsolat felület</rdfs:label>
+        <skos:definition xml:lang="en">A fiat connection surface which is formed between an object and an environmental system that environs it.</skos:definition>
+        <skos:example xml:lang="en">The connection surface at the external face of a wall, between the wall and the external environment.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <rdfs:comment xml:lang="en">It has a small material part of both objects and as such can bear physical and material properties and dispositions, like contact temperature, contact thermal resistance or surface heat transfer coefficient.</rdfs:comment>
+        <rdfs:label xml:lang="en">fiat connection surface</rdfs:label>
+        <rdfs:label xml:lang="hu">fiat kapcsolat felület</rdfs:label>
+        <skos:definition xml:lang="en">A fiat object part that is formed where two material entities are connected to each other, which is minimal in one spatial dimension.</skos:definition>
+        <skos:example xml:lang="en">The connection surface between a masonry wall and its plaster layer.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#FiatObjectSurface -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatObjectSurface">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000175"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Inspired by PSO: a fiat object part that is minimal in one spatial dimension. A material entity itself, unlike a bfo: fiat boundary, which can have őhysical and material properties apart from the object it belongs to.</rdfs:comment>
+        <rdfs:label xml:lang="en">fiat object surface</rdfs:label>
+        <rdfs:label xml:lang="hu">fiat objektum felület</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#GeometricalQuality -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#GeometricalQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">Should ideally be imported from a suitable reference ontology.</rdfs:comment>
+        <rdfs:comment xml:lang="en">what about surface coverage as in the surafce coverage of a coating on another material? It is clrealy geometrical, does it fit into one of the main categories?</rdfs:comment>
+        <rdfs:label xml:lang="hu">geometriai kvalitás</rdfs:label>
+        <rdfs:label xml:lang="en">geometrical quality</rdfs:label>
+        <skos:definition xml:lang="en">Position, Size, Shape, Orientation, Alignment</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#InSituBuildingConstructionObject -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#InSituBuildingConstructionObject">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PrefabricatedBuildingConstructionObject"/>
+        <rdfs:comment xml:lang="en">A building construction object that is formed to its final shape and material composition in-situ during the very act og building that creates it. It is usually adhered on top of an exsiting building construction object (e.g. a plaster layer) or it is cast into a formwork formed by some optionally temporary building construction objects (e.g. in-situ concrete, or losse thermal insulation filled in a void).
+It can have prefabricated building construction objects as parts (e.g. the rebars in an in-situe reinforced concrete wall).
+Its creation is usually connected to phase change (like the wet plaster or concrete setting).
+An in-situ building construction object is not identical to any products or batches f material used to construct it, like a plaster layer is not identical to the water sand and cement that was used to create it.</rdfs:comment>
+        <rdfs:label xml:lang="hu">helyszíni épületszerkezeti objektum</rdfs:label>
+        <rdfs:label xml:lang="en">in-situ building construction object</rdfs:label>
+        <skos:definition xml:lang="en">A building construction object that is not identical to a product</skos:definition>
+        <skos:example xml:lang="en">A plaster layer, an in-situ reinforced concrete concrete member, a paint layer applied on site.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#InformationContentEntity -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#InformationContentEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+        <skos:definition xml:lang="en">A generically dependendent continuant that generically depends on some information bearing entity ands stands in relation of aboutness to some entity.</skos:definition>
+        <skos:prefLabel xml:lang="en">In the next version should be imported from some suitable reference ontology, mostly likely CCO or IAO.
+For now it is based on the CCO class.</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#InternalBuildingEnvironment -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#InternalBuildingEnvironment">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingEnvironment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsEnvironmentOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset"/>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An internal building environment contains all the material entities in its site (the air, furniture, people and eequipment etc in a room) including the fiat connection surfaces that surround its site (the internal surafces of the building construction objects that form the outer surfaces of a room). A single internal surface is in causal connection with the other surfaces of the same room (e.b. through radiation exchange, reverberation of sound, convection of air etc.) so they must form part of the same environmental system.</rdfs:comment>
+        <rdfs:label xml:lang="hu">belső épület környezet</rdfs:label>
+        <rdfs:label xml:lang="en">internal building environment</rdfs:label>
+        <skos:definition xml:lang="en">A building environment that is contained inside a building.</skos:definition>
+        <skos:example xml:lang="en">An environmental system within a room of a building.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#InternalFiatConnectionSurface -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#InternalFiatConnectionSurface">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#IsConnectionSurfaceOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030"/>
+                            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingSiteAsMaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#FiatConnectionSurface"/>
+        <rdfs:comment xml:lang="en">Contact phenomena depend on both objects.</rdfs:comment>
+        <rdfs:label xml:lang="hu">belső fiat kapcsolat felület</rdfs:label>
+        <rdfs:label xml:lang="en">internal fiat connection surface</rdfs:label>
+        <skos:definition xml:lang="en">A fiat connection surface that is formed between to objects.</skos:definition>
+        <skos:example xml:lang="en">The connection surafce between to thermal insulation boards.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:comment xml:lang="en">In a later version this should be imported from some suitable reference ontology, perhaps IOF or CCO.
+In IOF: an object which also includes some solid portion of matter. An object made or shaped by a human.
+In CCO: Artifact: an object that was designed by some Agent to realize a certain function.</rdfs:comment>
+        <rdfs:label xml:lang="en">material artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialProperty -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialProperty">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <owl:disjointWith rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalProperty"/>
+        <rdfs:comment xml:lang="en">Should ideally be imported from a suitable reference ontology.
+Based in the class in PSO.</rdfs:comment>
+        <rdfs:label xml:lang="hu">anyagtulajdonság</rdfs:label>
+        <rdfs:label xml:lang="en">material property</rdfs:label>
+        <skos:definition xml:lang="en">A quality that can be measured to identify the physical characteristics of a batch of material.</skos:definition>
+        <skos:example xml:lang="en">Bulk air permeability, thermal conductivity, water vapor diffusivity.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MeasurementInformationContentEntity -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MeasurementInformationContentEntity">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DescriptiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">Based on the class in CCO. Should be an import.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement information content entity</rdfs:label>
+        <skos:definition xml:lang="en">A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#MeasurementUnit -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MeasurementUnit">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DescriptiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">Based on the class in CCO. 
+Should be an import.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurment unit</rdfs:label>
+        <rdfs:label xml:lang="hu">mértékegység</rdfs:label>
+        <skos:definition xml:lang="en">A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity.</skos:definition>
+        <skos:example xml:lang="en">Kelvin, Pascal, W/mK etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Model -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Model">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label xml:lang="en">model</rdfs:label>
+        <rdfs:label xml:lang="hu">modell</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) The representation of some aspects of one or more entities according to some standard or method. Models can have both designative, descriptive and prescriptive elements.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#NominalClassification -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#NominalClassification">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Classification"/>
+        <rdfs:label xml:lang="en">nominal classification</rdfs:label>
+        <rdfs:label xml:lang="hu">nominális klasszifikáció</rdfs:label>
+        <skos:definition xml:lang="en">A classification which is the end result of on an evaluation or analysis process</skos:definition>
+        <skos:example xml:lang="en">Meets requirement, good, poor, etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#NormativeClassification -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#NormativeClassification">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Classification"/>
+        <rdfs:label xml:lang="en">normative classification</rdfs:label>
+        <rdfs:label xml:lang="hu">normatív klasszifikáció</rdfs:label>
+        <skos:definition xml:lang="en">The classification of some entity based on some measurmeent method and  requirement set in some norm.</skos:definition>
+        <skos:example xml:lang="en">Classification of reinforced concrete walls according to their water permeabilty according to a specific standard</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalBehavior -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfile"/>
+        <rdfs:comment xml:lang="en">A physical behaviour demarcates some parts of a process according to specific laws of physics. For example, the thermal behaviour of fluid, the dynamic motion behaviour of a turbine, and the electromagnetic behaviour of an electric motor could be identified as different physical behaviours of a pumping process</rdfs:comment>
+        <rdfs:comment xml:lang="en">This should be imported from a suitable reference ontology. 
+For now this is based on the class in PSO.</rdfs:comment>
+        <rdfs:label xml:lang="hu">fizikai viselkedés</rdfs:label>
+        <rdfs:label xml:lang="en">physical behavior</rdfs:label>
+        <skos:example xml:lang="en">Heat transport process profile, mass transport process profile</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalProperty">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">Should ideally be importer from a suitable reference ontology.
+Based on the class in PSO.</rdfs:comment>
+        <rdfs:label xml:lang="hu">fizikai állapotjellemző</rdfs:label>
+        <rdfs:label xml:lang="en">physical property</rdfs:label>
+        <skos:definition xml:lang="en">A quality that describes the phsyical state of a material entitiy, but which cannot be used to characterize the material.</skos:definition>
+        <skos:example xml:lang="en">Temperature, pressure, relative humidity, moisture content etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PlanSpecification -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PlanSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DirectiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the future this could be imported from some suitable reference ontology. 
+But we want to distinguish requirement and plan specifications.</rdfs:comment>
+        <rdfs:label xml:lang="en">plan specification</rdfs:label>
+        <rdfs:label xml:lang="hu">terv specifikáció</rdfs:label>
+        <skos:definition xml:lang="en">A directive information content entity that prescibes some part or feature of a planned process or material entity.</skos:definition>
+        <skos:example xml:lang="en">Specification of product, geometry or process. For example the specification that a thermal isnulation layer is to be made of a specific product.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfBuildingMaterial -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfBuildingMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfMaterial"/>
+        <rdfs:comment xml:lang="en">Def. = A portion of material intended to be used as material input to an act of building.</rdfs:comment>
+        <rdfs:label xml:lang="en">portion of building material</rdfs:label>
+        <rdfs:label xml:lang="hu">építési anyag adag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfMaterial -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PortionOfMaterial">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment xml:lang="en">In a later version this should be imported from a suitable reference ontology.
+Inspired by EMMO ontology: a mater individual that stands for a real world object that represents an amount of a physical substance (or mixture of substances) in different states of matter or phases.
+Some definite kind, quality or quantitiy of matter.</rdfs:comment>
+        <rdfs:label xml:lang="hu">anyag adag</rdfs:label>
+        <rdfs:label xml:lang="en">portion of material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#PrefabricatedBuildingConstructionObject -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PrefabricatedBuildingConstructionObject">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+        <rdfs:comment xml:lang="en">A prefabricated building construction object is constructed from material inputs that are formed to or near to their final shape and consistency prior to the act of building construction, usually in a factory. On the construction site there is only removal of material (e.g. drilling of holes, cutting to size and shape) and the establishing of the connection(s) to the prior building construction objects is required. This act of building is an installation (not creation). As a result, the building construction object is materially identical to the product or products that were used to construct it.
+Here prefabricated is used differently than it is customary in the industry. An OSB board or a piece of themral insulation board are also prefabricated like a prefab concrete member, in that they are all created away and prior to the building, usually in a factory.</rdfs:comment>
+        <rdfs:label xml:lang="hu">előregyártott épületszerkezeti objektum</rdfs:label>
+        <rdfs:label xml:lang="en">prefabricated building structure object</rdfs:label>
+        <skos:definition xml:lang="en">A building construction object that is identical to a Product</skos:definition>
+        <skos:example xml:lang="en">A window, a door, an element of a steel frame, a pipe etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfile -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfile">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">process profile</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) The part of multiple processes that hase some common characteristics.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Product -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Product">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+                <owl:someValuesFrom rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ProductRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialArtifact"/>
+        <rdfs:comment xml:lang="en">In the next version this should be imported from a suitable reference ontology.
+In IOF: a material artifact that has a product role</rdfs:comment>
+        <rdfs:label xml:lang="en">product</rdfs:label>
+        <rdfs:label xml:lang="hu">termék</rdfs:label>
+        <skos:example xml:lang="en">An IPE 200 steel beam, a screw, a steel bracket, a batch of material etc. can all be products. A product can be manufactured (steel beem) or can be a natural material (like stone or wood) that is usually shaped or portionad by a human agent (a slab of stone, a board cut from a tree).</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ProductRole -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ProductRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment xml:lang="en">In the next version this should be an import from some suitable ontology.
+For now it is based on a class in an IOF paper.</rdfs:comment>
+        <rdfs:label xml:lang="en">product role</rdfs:label>
+        <rdfs:label xml:lang="hu">termék szerep</rdfs:label>
+        <skos:definition xml:lang="en">A role inhering in an entity that is the specified output of a product production process</skos:definition>
+        <skos:example xml:lang="en">The product role of a car.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#RequirementSpecification -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#RequirementSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DirectiveInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">In the future this could be imported from some suitable reference ontology. 
+But we want to distinguish requirement and plan specifications.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Usually expressed in terms of some measurement value or classification or nominal value and the corresponding measurment proecess and standard.</rdfs:comment>
+        <rdfs:label xml:lang="hu">követelmény specifikáció</rdfs:label>
+        <rdfs:label xml:lang="en">requirement specification</rdfs:label>
+        <skos:definition xml:lang="en">A directive information content entity that prescibes some constraint on some part or feature of a planned process or material entity.</skos:definition>
+        <skos:example xml:lang="en">thermal transmittance requirement, watertightness requirement, surface evenness requirement.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#SimulationModel -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#SimulationModel">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#Model"/>
+        <rdfs:label xml:lang="en">simulation model</rdfs:label>
+        <rdfs:label xml:lang="hu">szimulációs modell</rdfs:label>
+        <skos:definition xml:lang="en">A digtial model representing entities and their physical behaviour using mathematical model for the purpose of making predictions.</skos:definition>
+        <skos:example xml:lang="en">Thermal bridge simulation, hygrothermal simulation, building CFD simulation, etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#Stasis -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#Stasis">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ProcessProfile"/>
+        <rdfs:comment xml:lang="en">This should be imported from a suitable reference ontology. 
+For now this is based on the class in CCO, but moved to be a process profile.</rdfs:comment>
+        <rdfs:label xml:lang="en">stasis</rdfs:label>
+        <rdfs:label xml:lang="hu">sztázis</rdfs:label>
+        <skos:definition xml:lang="en">A Process in which one or more Independent Continuants endure in an unchanging condition</skos:definition>
+        <skos:example xml:lang="en">Stasis of material property, stasis of physical property, stasis of function realization, stasis of function failure</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#System -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#System">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment xml:lang="en">In the next version this should be imported from a suitable reference ontology.
+Barry Smith: a totality of dynamically interrelated physical elements (objects or material entities) with a certain delimited behavior. To delimit a system is to select a level of granularity of its elements, from elementary particles to entire galaxies. Systems have fiat boundaries, not bona fide boundaries.</rdfs:comment>
+        <rdfs:label xml:lang="hu">rendszer</rdfs:label>
+        <rdfs:label xml:lang="en">system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#TemporaryConstructionObject -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#TemporaryConstructionObject">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConstructionObject"/>
+        <rdfs:label xml:lang="hu">ideiglenes szerkezet</rdfs:label>
+        <rdfs:label xml:lang="en">temporary construction object</rdfs:label>
+        <skos:definition xml:lang="en">A material artifact, created via an act of building which is not constructional part of a building.</skos:definition>
+        <skos:example xml:lang="en">Scaffolding, shoring, bracing, coffer dam etc.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#TemporaryStructure -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#TemporaryStructure">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuiltAsset"/>
+        <rdfs:label xml:lang="en">temporary structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#UniqueIdentifier -->
+
+    <owl:Class rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#UniqueIdentifier">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#DesignativeInformationContentEntity"/>
+        <rdfs:comment xml:lang="en">The purpose of a unique identifier is enable the connection of representations of entities in various models or databases.</rdfs:comment>
+        <rdfs:label xml:lang="hu">egyedi azonosító</rdfs:label>
+        <rdfs:label xml:lang="en">unique identifier</rdfs:label>
+        <skos:definition xml:lang="en">A designative information content Entity that is unique within a given context.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BCO1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BCO1">
+        <rdf:type rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+        <HasConnectionSurface rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#BCO2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BCO2">
+        <rdf:type rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionComponent"/>
+        <HasConnectionSurface rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface1"/>
+        <HasConnectionSurface rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface1"/>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface2"/>
+    
+
+
+    <!-- http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem1">
+        <rdf:type rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#EnvironmentalSystem"/>
+        <HasConnectionSurface rdf:resource="http://www.github.com/dbakonyi/BCON/bcon.owl#ConnectionSurface2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionCreation"/>
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionDemolition"/>
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionInstallation"/>
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#ActOfConstructionModification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#BuildingConstructionProperty"/>
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#GeometricalQuality"/>
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#MaterialProperty"/>
+            <rdf:Description rdf:about="http://www.github.com/dbakonyi/BCON/bcon.owl#PhysicalProperty"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
